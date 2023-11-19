@@ -1,0 +1,114 @@
+fo1 r
+No of Lines Actual: 29
+No of lines Detected: 29
+
+fo1 v
+No of Lines Actual: 32
+No of lines Detected: 32
+
+fo2 r
+No of Lines Actual: 31
+No of lines Detected: 32
+
+fo2 v
+No of Lines Actual: 29
+No of lines Detected: 30
+
+fo3 r
+No of Lines Actual: 27
+No of lines Detected: 27
+
+fo3 v
+No of Lines Actual: 28
+No of lines Detected: 30
+
+fo4 r
+No of Lines Actual: 28
+No of lines Detected: 28
+
+fo4 v
+No of Lines Actual: 25
+No of lines Detected: 25
+
+fo5 r
+No of Lines Actual: 26
+No of lines Detected: 32
+
+fo5 v
+No of Lines Actual: 26
+No of lines Detected: 26
+
+fo6 r
+No of Lines Actual: 27
+No of lines Detected: 27
+
+fo6 v
+No of Lines Actual: 24
+No of lines Detected: 25
+
+fo7 r
+No of Lines Actual: 23
+No of lines Detected: 24
+
+fo7 v
+No of Lines Actual: 29
+No of lines Detected: 27
+
+fo8 r
+No of Lines Actual: 28
+No of lines Detected: 28
+
+fo8 v
+No of Lines Actual: 29
+No of lines Detected: 27
+
+fo9 r
+No of Lines Actual: 27
+No of lines Detected: 21
+
+fo9 v
+No of Lines Actual: 29
+No of lines Detected: 27
+
+fo10 r
+No of Lines Actual: 27
+No of lines Detected: 27
+
+fo10 v
+No of Lines Actual: 26
+No of lines Detected: 26
+
+fo11 r
+No of Lines Actual: 27
+No of lines Detected: 29
+
+fo11 v
+No of Lines Actual: 26
+No of lines Detected: 27
+
+fo12 r
+No of Lines Actual: 26
+No of lines Detected: 25
+
+fo12 v
+No of Lines Actual: 25
+No of lines Detected: 29
+
+fo13 r
+No of Lines Actual: 25
+No of lines Detected: 26
+
+fo13 v
+No of Lines Actual: 25
+No of lines Detected: 25
+
+fo14 r
+No of Lines Actual: 16
+No of lines Detected: 10
+
+
+
+
+
+
+
