@@ -87658,23 +87658,20 @@ document.addEventListener('DOMContentLoaded', function () {
       var imagePoints = data["points"];
 
       lines.forEach((line, lineIndex) => {
-          // Create a div for the line
+
           const lineDiv = document.createElement('div');
           lineDiv.className = 'line';
           lineDiv.id = `line${lineIndex + 1}`;
       
-          // Iterate through each character in the line
           for (let charIndex = 0; charIndex < line.length; charIndex++) {
-              // Create a div for the character
+
               const charDiv = document.createElement('div');
               charDiv.textContent = line[charIndex];
               charDiv.className = 'character';
               charDiv.id = `line${lineIndex + 1}-char${charIndex + 1}`;
       
-              // Set display property to inline-block for horizontal alignment
               charDiv.style.display = 'inline-block';
       
-              // Append the character div to the line div
               lineDiv.appendChild(charDiv);
           }
       
@@ -87685,21 +87682,18 @@ document.addEventListener('DOMContentLoaded', function () {
       
       document.querySelectorAll('.character').forEach(charDiv => {
           charDiv.addEventListener('click', function () {
-              // Get the parent line div
+
               const lineDiv = this.closest('.line');
               if (!lineDiv) return; // Ensure a line div is found
       
-              // Extract line number from the line div's ID
               const lineId = lineDiv.id;
               const lineNumber = parseInt(lineId.replace('line', ''));
       
-              // Extract character number from the character div's ID
               const charId = this.id;
               const charNumber = parseInt(charId.split('-')[1].replace('char', ''));
       
               highlightImagePoint(lineNumber, charNumber, imagePoints)
       
-              // Log the line and character number
               console.log('Line:', lineNumber, 'Character:', charNumber);
           });
       });

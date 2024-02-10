@@ -7,6 +7,9 @@ for i in range(3,29):
 
 with open(f'ref_map.pkl', 'rb') as pickle_file:
         ref_map = pickle.load(pickle_file)
+        
+with open('normalized_data_till_5.pkl', 'rb') as pickle_file:
+        normalzed_data = pickle.load(pickle_file)
 
 for k in range(3,29):
     to_remove = []
@@ -32,7 +35,8 @@ for i in range(3,29):
     
     map_[f'{i}']['points'] = data
     map_[f'{i}']['content'] = ref_map[i]
+    map_[f'{i}']['norm_content'] = normalzed_data[f"{i}"]
     map_[f'{i}']['imgSrc'] = f'resized_img/{i}.jpg'
 
 with open('points_and_content.json', 'w') as json_file:
-    json.dump(map_, json_file, indent=1)
+    json.dump(map_, json_file)
