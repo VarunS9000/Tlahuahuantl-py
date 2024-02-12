@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cursor Position</title>
   <style>
-
     .line {
       padding: 2px;
       white-space: pre-wrap;
+    }
+
+    title {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
     #container {
@@ -24,7 +29,7 @@
       margin-top: 20px;
       margin-right: 20px;
       overflow: hidden;
-      
+
     }
 
     #imageContainer {
@@ -38,33 +43,41 @@
       background-color: rgba(255, 0, 0, 0.5);
       border: 1px solid blue;
       border-radius: 0px;
-      width: 9px; /* Adjust the width of the box */
-      height: 12px; /* Adjust the height of the box */
-      box-sizing: border-box; /* Include border and padding in the element's total width and height */
-      left: 50%; /* Center horizontally */
-      top: 50%; /* Center vertically */
-      transform: translate(0%, -50%); /*Adjust to center the box precisely */
+      width: 9px;
+      /* Adjust the width of the box */
+      height: 12px;
+      /* Adjust the height of the box */
+      box-sizing: border-box;
+      /* Include border and padding in the element's total width and height */
+      left: 50%;
+      /* Center horizontally */
+      top: 50%;
+      /* Center vertically */
+      transform: translate(0%, -50%);
+      /*Adjust to center the box precisely */
     }
-
   </style>
 </head>
+
 <body>
 
-<select id="pageSelect">
-  <!-- Options will be dynamically added here -->
-</select>
+  <select id="pageSelect">
+    <!-- Options will be dynamically added here -->
+  </select>
 
-<div id="container">
-  <div id="imageContainer">
-    <img src="resized_img/3.jpg" alt="Your Image">
-    <div id="highlightPoint" class="highlight"></div>
+  <div id="container">
+    <div class="title">Image</div>
+    <div id="imageContainer">
+      <img src="resized_img/3.jpg" alt="Your Image">
+      <div id="highlightPoint" class="highlight"></div>
+    </div>
+    <div class="title">Orignal Text</div>
+    <div id="code" contenteditable="false">
+    </div>
   </div>
 
-  <div id="code" contenteditable="false">
-  </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
