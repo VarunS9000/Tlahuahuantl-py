@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Redirects</title>
+</head>
+<body>
+    <h1>Choose Highlighting Method</h1>
+    <button onclick="redirectToCharacterHighlighting()">Character-based highlighting</button>
+    <button onclick="redirectToWordHighlighting()">Word-based highlighting</button>
+
+    <script>
+        function redirectToCharacterHighlighting() {
+            // Redirect to test.html
+            window.location.href = 'test.html';
+        }
+
+        function redirectToWordHighlighting() {
+            // Redirect to test2.html
+            window.location.href = 'test2.html';
+        }
+    </script>
+</body>
+</html>

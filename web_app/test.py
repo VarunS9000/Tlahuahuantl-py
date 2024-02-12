@@ -8,8 +8,10 @@ for i in range(3,29):
 with open(f'ref_map.pkl', 'rb') as pickle_file:
         ref_map = pickle.load(pickle_file)
         
-with open('normalized_data_till_5.pkl', 'rb') as pickle_file:
-        normalzed_data = pickle.load(pickle_file)
+with open(f'norm_ref_map.pkl', 'rb') as pickle_file:
+        norm_ref_map = pickle.load(pickle_file)
+        
+
 
 for k in range(3,29):
     to_remove = []
@@ -32,10 +34,34 @@ for k in range(3,29):
 for i in range(3,29):
     with open(f'final_points_data/final_pts{i}.pkl', 'rb') as pickle_file:
         data = pickle.load(pickle_file)
+
+    word_data = []
+    for _ in range(len(data)):
+        word_data.append([])
     
-    map_[f'{i}']['points'] = data
+    start = 0
+    end = 0  
+    for j in range(len(data)):
+        line = data[j]
+        start = 0
+        end = 0
+        for k in range(len(line)):
+            if len(line[k])!=0:
+                end+=1
+            else:
+                word_data[j].append([line[start],line[end-1]])
+                end+=1
+                start = end
+        
+        word_data[j].append([line[start],line[end-1]])
+            
+            
+        
+    
+    map_[f'{i}']['character_points'] = data
+    map_[f'{i}']['word_points'] = word_data
     map_[f'{i}']['content'] = ref_map[i]
-    map_[f'{i}']['norm_content'] = normalzed_data[f"{i}"]
+    map_[f'{i}']['norm_content'] = norm_ref_map[i]
     map_[f'{i}']['imgSrc'] = f'resized_img/{i}.jpg'
 
 with open('points_and_content.json', 'w') as json_file:

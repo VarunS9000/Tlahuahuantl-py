@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Position</title>
+    <style>
+        .line {
+            padding: 2px;
+            white-space: pre-wrap;
+        }
+        
+        .norm_line {
+            padding: 2px;
+            white-space: pre-wrap;
+        }
+
+        .word {
+            display: inline-block;
+            margin-right: 5px;
+            /* Add spacing between words */
+        }
+
+        .word_norm {
+            display: inline-block;
+            margin-right: 5px;
+            /* Add spacing between words */
+        }
+
+
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        #code {
+            max-width: 50%;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            margin-right: 20px;
+            overflow: hidden;
+
+        }
+
+        #code1 {
+            max-width: 50%;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            margin-right: 20px;
+            overflow: hidden;
+
+        }
+
+
+        #imageContainer {
+            margin-top: 20px;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .highlight {
+            position: absolute;
+            border: 2px solid #ff0000;
+            /* Red border */
+            background-color: rgba(255, 0, 0, 0.2);
+            /* Red with 20% opacity */
+            border-radius: 5px;
+            /* Rounded corners */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            /* Shadow effect */
+            z-index: 999;
+            /* Ensure it appears on top of other elements */
+            pointer-events: none;
+            /* Allow pointer events to pass through */
+            transition: all 0.3s ease;
+            /* Smooth transition */
+        }
+    </style>
+</head>
+
+<body>
+
+    <select id="pageSelect">
+        <!-- Options will be dynamically added here -->
+    </select>
+
+    <div id="container">
+        <div id="imageContainer">
+            <img src="resized_img/3.jpg" alt="Your Image">
+            <div id="highlightBox" class="highlight"></div>
+        </div>
+        <div id="code1" contenteditable="false">
+        </div>
+        <div id="code" contenteditable="false">
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>
