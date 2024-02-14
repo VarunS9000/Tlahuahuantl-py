@@ -71,7 +71,17 @@ document.addEventListener('DOMContentLoaded', function () {
     renderPage(jsonData['3'])
 
 
+    codeContainer.addEventListener('scroll', function () {
+        // Set the scroll position of code2 to match code1
+        codeContainerNorm.scrollTop = this.scrollTop;
 
+    });
+
+    // Add scroll event listener to code2
+    codeContainerNorm.addEventListener('scroll', function () {
+        // Set the scroll position of code1 to match code2
+        codeContainer.scrollTop = this.scrollTop;
+    });
     // Event listener for dropdown menu selection change
     pageSelect.addEventListener('change', function () {
 
@@ -103,13 +113,13 @@ document.addEventListener('DOMContentLoaded', function () {
             var naturalHeight = img.naturalHeight;
 
             // Log the natural height to the console (for demonstration)
-            if (codeContainer.offsetHeight < naturalHeight) {
 
-                codeContainer.style.height = naturalHeight + 'px';
-                codeContainerNorm.style.height = naturalHeight + 'px';
-                console.log('Image natural height:', naturalHeight);
 
-            }
+            codeContainer.style.height = naturalHeight + 'px';
+            codeContainerNorm.style.height = naturalHeight + 'px';
+            console.log('Image natural height:', naturalHeight);
+
+
 
         };
 
