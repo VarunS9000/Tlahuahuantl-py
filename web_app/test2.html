@@ -10,7 +10,7 @@
             padding: 2px;
             white-space: pre-wrap;
         }
-        
+
         .norm_line {
             padding: 2px;
             white-space: pre-wrap;
@@ -42,6 +42,10 @@
             margin-top: 20px;
             margin-right: 20px;
             overflow: hidden;
+            display: flex;
+            /* Use flexbox layout */
+            flex-direction: column;
+            /* Arrange child elements vertically */
 
         }
 
@@ -51,7 +55,19 @@
             margin-top: 20px;
             margin-right: 20px;
             overflow: hidden;
+            display: flex;
+            /* Use flexbox layout */
+            flex-direction: column;
+            /* Arrange child elements vertically */
 
+        }
+
+        #code1>div,
+        #code>div {
+            /* Additional styles for the child divs */
+            flex: 1;
+            /* Make child divs grow to occupy remaining space */
+            
         }
 
 
