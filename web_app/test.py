@@ -69,10 +69,26 @@ for i in range(3,29):
         word_data[j].append([line[start],line[end-1]])
             
             
-        
+    word_to_index = {}
+    for a in range(len(word_data)): #line
+        for b in range(len(word_data[a])): #word
+            key1 = f'{word_data[a][b][0][0],word_data[a][b][0][1]}'
+            key1 = key1.replace('(','')
+            key1 = key1.replace(')','')
+            key1 = key1.replace(' ','')
+            key2 = f'{word_data[a][b][1][0],word_data[a][b][1][1]}'
+            key2 = key2.replace('(','')
+            key2 = key2.replace(')','')
+            key2 = key2.replace(' ','')
+            value = [[a,b],word_data[a][b][0],word_data[a][b][1]]
+            
+            word_to_index[key1] = value
+            word_to_index[key2] = value
+         
     
     map_[f'{i}']['character_points'] = data
     map_[f'{i}']['word_points'] = word_data
+    map_[f'{i}']['word_to_index'] = word_to_index
     map_[f'{i}']['content'] = ref_map[i]
     map_[f'{i}']['norm_content'] = norm_ref_map[i]
     map_[f'{i}']['imgSrc'] = f'resized_img/{i}.jpg'
