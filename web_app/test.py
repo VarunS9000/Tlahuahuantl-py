@@ -40,8 +40,27 @@ for k in range(3,29):
         ref_map[k][cnt] = ref_map[k][cnt].replace('Ã§','ç')
         ref_map[k][cnt] = ref_map[k][cnt].replace('Â§','Ç')
         
+        ref_map[k][cnt] = ref_map[k][cnt].replace(' ?Ç','?Ç')
+        ref_map[k][cnt] = ref_map[k][cnt].replace(' ?Ç','?Ç')
+        ref_map[k][cnt] = ref_map[k][cnt].replace(' ?Ç','?Ç')
+        
+        ref_map[k][cnt] = ref_map[k][cnt].replace(' ?ç','?ç')
+        ref_map[k][cnt] = ref_map[k][cnt].replace(' ?ç','?ç')
+        ref_map[k][cnt] = ref_map[k][cnt].replace(' ?ç','?ç')
+        
+        
+        
+        
         norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace('Ã§','ç')
         norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace('Â§','Ç')
+        
+        norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace(' ?Ç','?Ç')
+        norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace(' ?Ç','?Ç')
+        norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace(' ?Ç','?Ç')
+        
+        norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace(' ?ç','?ç')
+        norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace(' ?ç','?ç')
+        norm_ref_map[k][cnt] = norm_ref_map[k][cnt].replace(' ?ç','?ç')
 
 
 for i in range(3,29):
