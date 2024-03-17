@@ -64,7 +64,7 @@ for k in range(3,29):
 
 
 for i in range(3,29):
-    with open(f'final_points_data/final_pts{i}.pkl', 'rb') as pickle_file:
+    with open(f'final_pts_data_new/final_pts{i}.pkl', 'rb') as pickle_file:
         data = pickle.load(pickle_file)
 
     word_data = []
