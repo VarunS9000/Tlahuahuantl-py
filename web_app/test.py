@@ -5,10 +5,10 @@ map_ = {}
 for i in range(3,29):
     map_[f'{i}'] = {}
 
-with open(f'ref_map_org.pkl', 'rb') as pickle_file:
+with open(f'ref_map_org2.pkl', 'rb') as pickle_file:
         ref_map = pickle.load(pickle_file)
         
-with open(f'ref_map_norm.pkl', 'rb') as pickle_file:
+with open(f'ref_map_norm2.pkl', 'rb') as pickle_file:
         norm_ref_map = pickle.load(pickle_file)
         
 
