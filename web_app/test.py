@@ -33,7 +33,15 @@ for k in range(3,29):
     for i in range(len(ref_map[k])):
         for c in characters_list:
             ref_map[k][i] = ref_map[k][i].replace(c,'')
+        
+        
+        if ref_map[k][i][0] == "-":
+            ref_map[k][i] = ref_map[k][i][1:]
             
+        if norm_ref_map[k][i][0] == "-":
+            norm_ref_map[k][i] = norm_ref_map[k][i][1:]
+        
+        
 
 for k in range(3,29):
     for cnt in range(len(ref_map[k])):
