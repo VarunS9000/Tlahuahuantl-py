@@ -99,7 +99,9 @@ document.addEventListener('DOMContentLoaded', function () {
         preClass3 = ''
         preClass4 = ''
 
-
+        highlightingBoxes.forEach((element)=>{
+            element.style.display = "none"
+        })
 
         const selectedPage = this.value;
 
