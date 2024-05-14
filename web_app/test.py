@@ -45,6 +45,8 @@ for k in range(3,29):
 
 for k in range(3,29):
     for cnt in range(len(ref_map[k])):
+        if k == 15 and cnt == 20:
+            norm_ref_map[k][cnt] = "ovetztoca" + norm_ref_map[k][cnt]
         ref_map[k][cnt] = ref_map[k][cnt].replace('Ã§','ç')
         ref_map[k][cnt] = ref_map[k][cnt].replace('Â§','Ç')
         
@@ -55,6 +57,7 @@ for k in range(3,29):
         ref_map[k][cnt] = ref_map[k][cnt].replace(' ?ç','?ç')
         ref_map[k][cnt] = ref_map[k][cnt].replace(' ?ç','?ç')
         ref_map[k][cnt] = ref_map[k][cnt].replace(' ?ç','?ç')
+        ref_map[k][cnt] = ref_map[k][cnt].replace('-','')
         
         
         
